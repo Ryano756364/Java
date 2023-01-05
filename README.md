@@ -1,1 +1,1 @@
-# Genearl notes and practice problems with Java
+# General notes and practice problems with Java
