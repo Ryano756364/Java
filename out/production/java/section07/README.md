@@ -37,3 +37,17 @@ Encapsulation - example is making classes private
   - practice of hiding fields and some methods 
 
 ---
+Null - variable or attribute has a type, but no reference to an object
+  - primitive data types cannot be null
+  - Strings are not primitive so they can be null
+
+---
+Getter - retrieves value of a private field and returns it
+Setter = sets the value of a private field
+Purpose of both - to control, protect, and access private fields
+One of many goals - set validation when storing with setters
+___
+This - special reference for name for the object or instance, which it can use to descrive itself
+- and thus, we can use *this* to access fields on the class
+
+---

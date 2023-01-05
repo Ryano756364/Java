@@ -10,7 +10,7 @@ public class Car {
     private int doors = 2;
 
     // primitive data types that are not assigned values are given default values automatically
-    private boolean convertible = true;
+    private boolean isConvertible = true;
 
     // not static, because we are accessing instance fields on the class
     public void describeCar() {
@@ -18,7 +18,7 @@ public class Car {
                 color + " " +
                 make + " " +
                 model + " " +
-                (convertible ? "Convertible" : ""));
+                (isConvertible ? "Convertible" : ""));
     }
 
     // not declared static because we are not using static fields
@@ -26,17 +26,47 @@ public class Car {
     public String getMake() {
         return make;
     }
+    public void setMake(String make){
+        if (make == null) {
+            make = "Unkown";
+        }
+        String lowercaseMake = make.toLowerCase();
+        // set rule that we only support 3 manufactures
+        switch(lowercaseMake) {
+            case "holden", "porsche", "tesla" -> this.make = make;
+            default -> {
+                this.make = "Unsupported ";
+            }
+        }
+    }
+
     public String getModel() {
         return model;
     }
+    public void setModel(String model){
+        this.model = model;
+    }
+
     public String getColor(){
         return color;
     }
+    public void setColor(String color){
+        this.color = color;
+    }
+
     public int getDoors() {
         return doors;
     }
+    public void setDoors(int doors) {
+        this.doors = doors;
+    }
+
+
     public boolean isConvertible() {
-        return convertible;
+        return isConvertible;
+    }
+    public void setConvertible(boolean isConvertable) {
+        this.isConvertible = isConvertable;
     }
 
 }
