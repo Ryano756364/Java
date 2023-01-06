@@ -13,11 +13,16 @@ public class Car {
     private boolean isConvertible = true;
 
     // Constructor - empty is default if not are created
-    public Car(){}
+    public Car(){
+        // calling a constructor within another constructor
+        // must be the first line item if you call a constructor from within another constructor
+        this("default make", "default model", "default color", 4, true);
+    }
 
     // Constructor overloading - multiple constructors with different formal parameters
     // number of parameters can be different
     // but if they are the same, their types or order of types must differ
+    // in constructors, call field, don't use the setter
     public Car(String make, String model, String color, int doors, boolean isConvertible){
         // this wouldn't be required if we had different field names from parameter names
         this.make = make;
@@ -25,6 +30,12 @@ public class Car {
         this.color = color;
         this.doors = doors;
         this.isConvertible = isConvertible;
+    }
+
+    // constructors do not have to have equal amounts of arguments as fields of the class
+    public Car(int doors, boolean isConvertible){
+        // default values with this constructor example
+        this("make", "model", "color", doors, isConvertible);
     }
 
 
