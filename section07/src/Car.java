@@ -12,6 +12,22 @@ public class Car {
     // primitive data types that are not assigned values are given default values automatically
     private boolean isConvertible = true;
 
+    // Constructor - empty is default if not are created
+    public Car(){}
+
+    // Constructor overloading - multiple constructors with different formal parameters
+    // number of parameters can be different
+    // but if they are the same, their types or order of types must differ
+    public Car(String make, String model, String color, int doors, boolean isConvertible){
+        // this wouldn't be required if we had different field names from parameter names
+        this.make = make;
+        this.model = model;
+        this.color = color;
+        this.doors = doors;
+        this.isConvertible = isConvertible;
+    }
+
+
     // not static, because we are accessing instance fields on the class
     public void describeCar() {
         System.out.println(doors + "-Door " +
