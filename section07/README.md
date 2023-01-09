@@ -27,7 +27,7 @@ Class is a blueprint
 
 ---
 
-#TODO (insert photo of accessmodifier notes here)
+#TODO (insert photo of access modifier notes here)
 
 ---
 
